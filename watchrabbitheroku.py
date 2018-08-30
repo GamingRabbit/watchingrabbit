@@ -33,5 +33,10 @@ async def on_message(message):
         pass
     else:
         await client.send_message(channel, '{0} wrote {1}'.format(message.author, message.content))
+        
+
+@client.event
+async def on_member_join(member):
+    await client.send_message(member, "welcome to Gaming Rabbits home.Please answer the questions and read the rules.")
 
 client.run(os.getenv("TOKEN"))
