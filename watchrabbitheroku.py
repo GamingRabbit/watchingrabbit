@@ -37,6 +37,6 @@ async def on_message(message):
 
 @client.event
 async def on_member_join(member):
-    await client.send_message(member, "welcome to Gaming Rabbits home.Please answer the questions and read the rules.")
+    await client.send_message(member, "welcome {}.Please answer the questions and read the rules.".format(member.server))
 
 client.run(os.getenv("TOKEN"))
